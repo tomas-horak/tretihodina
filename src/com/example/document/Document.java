@@ -1,8 +1,9 @@
 package com.example.document;
 
+import com.example.catalog.Readable;
 import com.example.catalog.Searchable;
 
-public class Document implements Searchable {
+public class Document implements Searchable, Readable {
     private String serialNumber, subjects, contents;
 
     public Document(String serialNumber, String subjects, String contents) {
@@ -43,5 +44,10 @@ public class Document implements Searchable {
     @Override
     public String prepareSearchableString() {
         return serialNumber + subjects + contents;
+    }
+
+    @Override
+    public String printContents() {
+        return contents;
     }
 }

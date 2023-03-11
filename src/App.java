@@ -52,6 +52,14 @@ public class App {
 
         String result = catalog.find(query);
         System.out.println(result);
+
+        //domácí úkol:
+        System.out.println(
+                page.printContents()
+        );
+        System.out.println(
+                document.printContents()
+        );
     }
 
 }

@@ -1,8 +1,9 @@
 package com.example.document;
 
+import com.example.catalog.Readable;
 import com.example.catalog.Searchable;
 
-public class WebPage implements Searchable {
+public class WebPage implements Searchable, Readable {
     private String address, title, contents;
 
     public WebPage(String address, String title, String contents) {
@@ -43,5 +44,10 @@ public class WebPage implements Searchable {
     @Override
     public String prepareSearchableString() {
         return title + address + contents;
+    }
+
+    @Override
+    public String printContents() {
+        return contents;
     }
 }
